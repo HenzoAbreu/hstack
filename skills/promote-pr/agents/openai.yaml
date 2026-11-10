@@ -1,0 +1,4 @@
+interface:
+  display_name: "Promote PR"
+  short_description: "Cherry-pick a PR onto a fresh branch from main or another target"
+  default_prompt: "Use $promote-pr to promote this PR into main."

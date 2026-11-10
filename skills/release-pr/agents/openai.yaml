@@ -1,0 +1,4 @@
+interface:
+  display_name: "Release PR"
+  short_description: "Bundle PRs into one release PR with a changelog"
+  default_prompt: "Use $release-pr to bundle these PRs into a release PR for main."

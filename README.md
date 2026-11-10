@@ -17,6 +17,8 @@ not.
 | `takeover` | "take over" | Finishes someone else's PR, branch, or agent thread, and keeps their credit. |
 | `babysit-pr` | "babysit" | Watches a PR through CI and review bots, and fixes the real findings. |
 | `modernize` | "modernize" | Rebases an old PR and decides if it should still exist. |
+| `promote-pr` | "promote this PR" | Cherry-picks a PR onto a fresh branch from `main`, or another branch you name, and opens a PR. |
+| `release-pr` | "release these PRs" | Bundles several PRs into one release PR with a changelog, closes the old ones, then runs tests. |
 | `leaving-pr-comments` | (automatic) | Formats comments that an agent posts on your behalf. |
 
 Some skills call others. Install the ones they need too:
@@ -24,6 +26,8 @@ Some skills call others. Install the ones they need too:
 - `full-send` uses `sol-loop`, `file-pr`, and `babysit-pr`.
 - `full-stop` uses `full-send`.
 - `takeover` uses `modernize`, `file-pr`, `babysit-pr`, and `leaving-pr-comments`.
+- `promote-pr` uses `file-pr` and `leaving-pr-comments`.
+- `release-pr` uses `promote-pr`, `file-pr`, `babysit-pr`, and `leaving-pr-comments`.
 - `file-pr`, `babysit-pr`, and `modernize` use `leaving-pr-comments`.
 
 ## Install
